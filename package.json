@@ -1,9 +1,10 @@
 {
   "name": "star-product-rating",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "A simple react component library that enable react developers easily use, edit, tweak and style a rating functionality on the go for products or services in an e-commerce web-application or mobile application ",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -28,18 +29,26 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.2"
   },
   "peerDependencies": {
+    "@types/react": "^18.3.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@types/react": "^18.3.5"
+    "react-dom": "^18.3.1"
   },
   "dependencies": {
     "rollup": "^4.21.2",
-    "rollup-plugin-postcss": "^4.0.2"
-  }
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.7.0"
+  },
+  "files": [
+    "dist",
+    "types"
+  ]
 }
