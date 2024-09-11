@@ -1,6 +1,6 @@
 {
   "name": "star-product-rating",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple react component library that enable react developers easily use, edit, tweak and style a rating functionality on the go for products or services in an e-commerce web-application or mobile application ",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

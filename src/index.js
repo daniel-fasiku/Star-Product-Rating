@@ -1,2 +1,2 @@
-import StarRating from "./Components/StarRating/StarRating.jsx";
-export default StarRating;
+import StarRating from "./Components/StarRating/StarRating";
+export { StarRating };

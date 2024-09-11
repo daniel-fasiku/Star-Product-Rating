@@ -34,7 +34,7 @@ Here's a basic example of how to use the StarRating component:
 ``` jsx
 
 import React, { useState } from 'react';
-import StarProductRating from 'star-product-rating';
+import { StarRating } from "star-product-rating";
 import './WatchedMovieCard.css';
 
 const WatchedMovieCard = ({ image, title, imbRating, userRating, watchTime }) => {
@@ -46,7 +46,7 @@ const WatchedMovieCard = ({ image, title, imbRating, userRating, watchTime }) =>
             <div className="wm-card-text-wrapper">
                 <h4 className="wm-card-text1">{title}</h4>
                 <div className="wm-card-text2-wrapper">
-                    <StarProductRating 
+                    <StarRating 
                         size={16} 
                         starLength={5} 
                         color='yellow' 
@@ -104,6 +104,33 @@ export default WatchedMovieCard;
   color="#FFD700"
   size={24}
   disabled={true}
+  newRating={handleNewRating}
+/>
+```
+
+### Compulsory Props
+#### The props below are required to prevent any error and to enable you store the data from the rating functionalities
+
+```jsx
+<StarRating
+  starLength={5}
+  color="#FFD700"
+  size={24}
+  defaultRating={storedRating} 
+  newRating={handleNewRating}
+/>
+```
+
+### Messages Props
+#### The messages props must contain values (strings) of the same length with the number value inputted in the starLength prop.
+
+```jsx
+<StarRating
+  starLength={5}
+  messages={['Terrible', 'Bad', 'Okay', 'Good', 'Amazing']}
+  color="#FFD700"
+  size={24}
+  defaultRating={storedRating} 
   newRating={handleNewRating}
 />
 ```
