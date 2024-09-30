@@ -25,7 +25,11 @@ const StarRating = ({ starLength = 5, color = '#000000', size = 24, disabled = f
     const handleStoreRating = (rating, disabled) => {
         if (!disabled) {
             setStoredRating(rating);
-            newRating(rating);
+            if (newRating) {
+                newRating(rating);
+            } else {
+                setStoredRating(rating);
+            }
         } else {
             return undefined;
         }
